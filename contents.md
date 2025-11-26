@@ -40,6 +40,10 @@
 &nbsp;&nbsp;&nbsp;这篇论文提出了一种无需修改模型或重新训练的测试时数据增强（test-time data augmentation, TTA）方法，用于估计深度神经网络在医学图像分析中的异方差偶然不确定性（heteroscedastic aleatoric uncertainty）。其核心思想是：在测试阶段对输入图像进行几何和颜色变换（如旋转、翻转、亮度调整等），通过观察模型在这些扰动下的输出变化，来估计输入相关的预测不确定性。该方法在糖尿病视网膜病变（DR）检测任务上进行了验证，结果表明其不确定性估计与预测错误高度相关，可用于主动筛选高风险样本供医生复核，从而提升临床决策的可靠性。相比传统贝叶斯方法（如MC Dropout、MCBN），TTA 更简单、通用，且不受训练方式限制，是一种实用、可解释的不确定性估计工具。<br>
 <br>
 
+ &nbsp;&nbsp;&nbsp; 8、[SoftDropConnect (SDC) -- Effective and Efficient Quantification of the Network Uncertainty in Deep MR Image Analysis](https://arxiv.org/abs/2201.08418)<br>
+&nbsp;&nbsp;&nbsp;这篇论文提出了一种新的贝叶斯推理方法——SoftDropConnect（SDC），用于量化深度神经网络在医学图像分析中的不确定性。不同于传统的 Dropout 或 DropConnect 方法，SDC 在训练和测试阶段通过连续均匀分布对网络连接权重进行软调制，而非直接丢弃连接，从而保留信息流的完整性，减少信息损失。<br>
+<br>
+
 三、不确定性的评价以及校准
 ----
 
